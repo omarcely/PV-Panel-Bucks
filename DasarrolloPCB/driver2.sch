@@ -1,0 +1,141 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr User 5591 4016
+encoding utf-8
+Sheet 4 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Driver_FET:IR2110 U1
+U 1 1 61FFE8F7
+P 2210 1430
+AR Path="/61FFE492/61FFE8F7" Ref="U1"  Part="1" 
+AR Path="/6200E9FD/61FFE8F7" Ref="U2"  Part="1" 
+F 0 "U2" H 2210 1555 50  0000 C CNN
+F 1 "IR2110" H 2370 1875 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 2210 1430 50  0001 C CIN
+F 3 "https://www.infineon.com/dgdl/ir2110.pdf?fileId=5546d462533600a4015355c80333167e" H 2210 1430 50  0001 C CNN
+	1    2210 1430
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61FFF9AE
+P 1840 1780
+AR Path="/61FFE492/61FFF9AE" Ref="#PWR?"  Part="1" 
+AR Path="/6200E9FD/61FFF9AE" Ref="#PWR0114"  Part="1" 
+F 0 "#PWR0114" H 1840 1530 50  0001 C CNN
+F 1 "GND" H 1845 1607 50  0000 C CNN
+F 2 "" H 1840 1780 50  0001 C CNN
+F 3 "" H 1840 1780 50  0001 C CNN
+	1    1840 1780
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61FFF9F3
+P 2160 2025
+AR Path="/61FFE492/61FFF9F3" Ref="#PWR?"  Part="1" 
+AR Path="/6200E9FD/61FFF9F3" Ref="#PWR0115"  Part="1" 
+F 0 "#PWR0115" H 2160 1775 50  0001 C CNN
+F 1 "GND" H 2165 1852 50  0000 C CNN
+F 2 "" H 2160 2025 50  0001 C CNN
+F 3 "" H 2160 2025 50  0001 C CNN
+	1    2160 2025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1910 1530 1840 1530
+Wire Wire Line
+	1910 1630 1840 1630
+Wire Wire Line
+	1840 1530 1840 1630
+Connection ~ 1840 1630
+Wire Wire Line
+	1840 1630 1840 1780
+Wire Wire Line
+	2210 1930 2210 1980
+Wire Wire Line
+	2210 1980 2160 1980
+Wire Wire Line
+	2110 1980 2110 1930
+Wire Wire Line
+	2160 1980 2160 2025
+Connection ~ 2160 1980
+Wire Wire Line
+	2160 1980 2110 1980
+Text HLabel 1585 1430 0    50   Input ~ 0
+PWM_in
+Wire Wire Line
+	1585 1430 1910 1430
+Text HLabel 3770 1630 2    50   Input ~ 0
+Vcc
+Wire Wire Line
+	3770 1630 3595 1630
+Text HLabel 2210 735  1    50   Input ~ 0
+Vdd
+Wire Wire Line
+	2210 735  2210 930 
+NoConn ~ 2510 1730
+Text HLabel 3190 1530 2    50   Input ~ 0
+Vs
+Wire Wire Line
+	3190 1530 3075 1530
+Text HLabel 2635 1230 2    50   Input ~ 0
+PWM_out
+Wire Wire Line
+	2635 1230 2510 1230
+$Comp
+L Device:C CB1
+U 1 1 620022E0
+P 3075 1340
+AR Path="/61FFE492/620022E0" Ref="CB1"  Part="1" 
+AR Path="/6200E9FD/620022E0" Ref="CB2"  Part="1" 
+F 0 "CB2" H 3190 1386 50  0000 L CNN
+F 1 "0.47uF" H 3190 1295 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L16.5mm_W5.0mm_P15.00mm_MKT" H 3113 1190 50  0001 C CNN
+F 3 "~" H 3075 1340 50  0001 C CNN
+	1    3075 1340
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3075 1490 3075 1530
+Connection ~ 3075 1530
+Wire Wire Line
+	3075 1530 2510 1530
+Wire Wire Line
+	3075 1190 3075 1130
+Wire Wire Line
+	3075 1130 2510 1130
+$Comp
+L Device:D DB1
+U 1 1 62004701
+P 3595 1340
+AR Path="/61FFE492/62004701" Ref="DB1"  Part="1" 
+AR Path="/6200E9FD/62004701" Ref="DB2"  Part="1" 
+F 0 "DB2" V 3549 1420 50  0000 L CNN
+F 1 "UF4005" V 3640 1420 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3595 1340 50  0001 C CNN
+F 3 "~" H 3595 1340 50  0001 C CNN
+	1    3595 1340
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3595 1490 3595 1630
+Connection ~ 3595 1630
+Wire Wire Line
+	3595 1630 2510 1630
+Wire Wire Line
+	3595 1190 3595 1130
+Wire Wire Line
+	3595 1130 3075 1130
+Connection ~ 3075 1130
+$EndSCHEMATC
